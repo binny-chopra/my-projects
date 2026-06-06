@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+   Map design tokens to Tailwind so utilities like `bg-surface`,
+   `text-dim`, `border-line`, `font-mono`, `shadow-card` work directly.
+   Values resolve to CSS variables that switch with the theme.
+   ------------------------------------------------------------------ */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-text: var(--text);
+  --color-dim: var(--text-dim);
+  --color-faint: var(--text-faint);
+  --color-line: var(--line);
+  --color-line2: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accentc: var(--accent-contrast);
+  --color-up: var(--up);
+  --color-accent2: var(--accent-2);
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --breakpoint-menu: 56rem;
+
+  --shadow-card: var(--shadow);
+
+  --animate-dot: dot 2.4s infinite;
+  --animate-draw: draw 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ------------------------------------------------------------------
+   Theme token values. Switched via the [data-theme] attribute on <html>.
+   ------------------------------------------------------------------ */
+:root,
+[data-theme='dark'] {
+  --bg: #0a0b0e;
+  --bg-2: #0e1015;
+  --surface: #14171e;
+  --surface-2: #191d26;
+  --text: #e9ebf0;
+  --text-dim: #aab0bd;
+  --text-faint: #6b7280;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --grid: rgba(255, 255, 255, 0.028);
+  --accent: #5b8cff;
+  --accent-contrast: #ffffff;
+  --glow: rgba(91, 140, 255, 0.16);
+  --up: #2fce9b;
+  --accent-2: #ff7a59;
+  --shadow: 0 24px 60px -22px rgba(0, 0, 0, 0.75);
+}
+
+[data-theme='light'] {
+  --bg: #f4f2ec;
+  --bg-2: #efece4;
+  --surface: #ffffff;
+  --surface-2: #faf8f3;
+  --text: #14161b;
+  --text-dim: #4b515d;
+  --text-faint: #8a8f9a;
+  --line: rgba(20, 22, 27, 0.1);
+  --line-strong: rgba(20, 22, 27, 0.2);
+  --grid: rgba(20, 22, 27, 0.035);
+  --accent: #2d5cf0;
+  --accent-contrast: #ffffff;
+  --glow: rgba(45, 92, 240, 0.12);
+  --up: #2fce9b;
+  --accent-2: #ff7a59;
+  --shadow: 0 24px 50px -26px rgba(40, 44, 60, 0.4);
+}
+
+/* ------------------------------------------------------------------
+   Base layer: body background, atmospheric grid + grain, selection.
+   ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:
+      background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-contrast);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Keyframes used by --animate-* tokens above.
+   ------------------------------------------------------------------ */
+@keyframes dot {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--up) 60%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 9px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
