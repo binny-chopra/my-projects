@@ -31,7 +31,7 @@ npm run lint     # run ESLint
 my-projects/
 ├── index.html              # entry HTML (fonts + pre-paint theme script)
 ├── vite.config.js          # Vite + React + Tailwind plugins
-├── public/assets/          # profile.jpg (1:1) and the résumé PDF
+├── public/assets/          # profile.jpeg (1:1) and the résumé PDF
 └── src/
     ├── components/
     │   ├── common/         # Button, Container, Reveal, CountUp,
@@ -59,7 +59,7 @@ my-projects/
 
 ## Replacing the profile photo
 
-The hero shows a **square (1:1)** image at `public/assets/profile.jpg`. Replace that
+The hero shows a **square (1:1)** image at `public/assets/profile.jpeg`. Replace that
 file with your own 1:1 crop (keep the filename) — no code changes needed.
 
 ## Company & university logos

@@ -80,7 +80,7 @@ export function Hero() {
         <Reveal delay={0.16} className="mx-auto flex w-full max-w-[460px] flex-col menu:mx-0">
           <figure className="relative overflow-hidden rounded-2xl border border-line bg-surface shadow-card ring-1 ring-inset ring-line2">
             <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between bg-gradient-to-b from-black/45 to-transparent px-3.5 py-3 font-mono text-[0.66rem] text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
-              <span>PROFILE.jpg</span>
+              <span>PROFILE.jpeg</span>
               <span>● REC</span>
             </div>
             <img
