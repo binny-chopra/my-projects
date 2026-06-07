@@ -12,7 +12,7 @@ export const personal = {
   availability: 'Open to frontend & SWE roles',
   email: '159.binny@gmail.com',
   photo: import.meta.env.BASE_URL + 'assets/profile.jpg',
-  photoCaption: 'United Nations · Geneva',
+  photoCaption: 'Geneva · Switzerland',
   photoYear: '2024',
 };
 
