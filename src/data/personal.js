@@ -12,7 +12,7 @@ export const personal = {
   availability: 'Open to frontend & SWE roles',
   email: '159.binny@gmail.com',
   // Square (1:1) profile image shown beside the name in the hero.
-  photo: '/assets/profile.jpg',
+  photo: `${socials['projects']['url']}/assets/profile.jpg`,
   photoCaption: 'United Nations · Geneva',
   photoYear: '2024',
 };
