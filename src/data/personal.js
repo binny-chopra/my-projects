@@ -11,8 +11,7 @@ export const personal = {
   location: 'United States',
   availability: 'Open to frontend & SWE roles',
   email: '159.binny@gmail.com',
-  // Square (1:1) profile image shown beside the name in the hero.
-  photo: `${socials['projects']['url']}/assets/profile.jpg`,
+  photo: import.meta.env.BASE_URL + 'assets/profile.jpg',
   photoCaption: 'United Nations · Geneva',
   photoYear: '2024',
 };
