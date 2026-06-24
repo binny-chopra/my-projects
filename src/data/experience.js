@@ -1,6 +1,21 @@
 /** Professional experience, newest first. */
 export const experience = [
   {
+    id: 'jerseystem',
+    short: 'jerseystem',
+    color: '#1f6fb2',
+    domain: 'jerseystem.org',
+    role: 'Intern — Software Engineering',
+    company: 'JerseySTEM',
+    project: 'Education Platform',
+    period: 'Feb 2026 — Present',
+    location: 'Remote, USA',
+    highlights: [
+      'Built and maintained internal tools on UI Bakery, integrating Salesforce data to streamline workflows and improve usability for stakeholders.',
+      'Led exploration of React alternatives to UI Bakery, using AI-assisted development to build a Node.js Proof of Concept that surfaced critical database and interaction issues with Salesforce data.',
+    ],
+  },
+  {
     id: 'wto',
     short: 'WTO',
     color: '#1f6fb2',
