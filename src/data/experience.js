@@ -20,7 +20,7 @@ export const experience = [
     short: 'WTO',
     color: '#1f6fb2',
     domain: 'wto.org',
-    role: 'Software Engineering - Intern',
+    role: 'Software Engineer - Intern',
     company: 'World Trade Organization (WTO)',
     project: 'Internal intranet application',
     period: 'Sep 2024 — Jan 2025',
