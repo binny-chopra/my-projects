@@ -22,7 +22,7 @@ export function Contact() {
   const submitting = status.state === 'submitting';
 
   return (
-    <section id="contact" className="py-[clamp(70px,11vw,140px)]">
+    <section id="contact" className="py-[clamp(26px,3.8vw,52px)]">
       <Container>
         <SectionHeading eyebrow="06 / Contact" title="Let's build something." highlight="build" />
 

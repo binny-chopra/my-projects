@@ -48,7 +48,7 @@ export function Sparkline({ label = 'render performance', value = '0.84s' }) {
   }, []);
 
   return (
-    <div className="mt-4 rounded-xl border border-line bg-surface px-4 py-3.5">
+    <div className="flex h-full flex-col justify-center rounded-xl border border-line bg-surface px-4 py-3.5">
       <div className="mb-2 flex items-baseline justify-between">
         <span className="font-mono text-[0.7rem] uppercase tracking-[0.04em] text-faint">{label}</span>
         <span className="font-mono text-[0.92rem] font-semibold text-up">{value}</span>

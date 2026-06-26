@@ -43,9 +43,13 @@ export function Navbar() {
           aria-label={`${personal.name} — home`}
           className="flex items-center gap-[11px] font-mono"
         >
-          <span className="grid h-[34px] w-[34px] place-items-center rounded-lg bg-accent text-[0.85rem] font-bold text-accentc shadow-[0_0_0_1px_var(--line-strong),0_6px_18px_-8px_var(--accent)]">
-            BC
-          </span>
+          <img
+            src={personal.photo}
+            alt={`${personal.name}`}
+            width={34}
+            height={34}
+            className="h-[34px] w-[34px] shrink-0 rounded-full object-cover shadow-[0_0_0_1px_var(--line-strong),0_6px_18px_-8px_var(--accent)] ring-1 ring-inset ring-white/10"
+          />
           <span className="flex flex-col leading-[1.1]">
             <b className="text-[0.92rem]">{personal.name}</b>
             <span className="text-[0.64rem] tracking-[0.04em] text-faint">{personal.shortRole}</span>

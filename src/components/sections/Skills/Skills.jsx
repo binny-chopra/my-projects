@@ -6,7 +6,7 @@ import { skillGroups } from '../../../data/skills';
 
 export function Skills() {
   return (
-    <section id="skills" className="py-[clamp(70px,11vw,140px)]">
+    <section id="skills" className="py-[clamp(26px,3.8vw,52px)]">
       <Container>
         <SectionHeading
           eyebrow="02 / Toolkit"

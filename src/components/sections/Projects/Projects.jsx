@@ -9,7 +9,7 @@ import { socials } from '../../../data/personal';
 
 export function Projects() {
   return (
-    <section id="projects" className="py-[clamp(70px,11vw,140px)]">
+    <section id="projects" className="py-[clamp(26px,3.8vw,52px)]">
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-[18px]">
           <SectionHeading

@@ -30,6 +30,8 @@
 
   --animate-dot: dot 2.4s infinite;
   --animate-draw: draw 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-scrollline: scrollline 1.9s ease-in-out infinite;
 }
 
 /* ------------------------------------------------------------------
@@ -151,8 +153,53 @@
   }
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(320%);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Cinematic video-intro overlay: darkens edges, lifts the lower third
+   for text legibility, and adds a warm accent glow near the base.
+   ------------------------------------------------------------------ */
+@layer components {
+  .cinematic-overlay {
+    pointer-events: none;
+    background:
+      linear-gradient(to top, var(--bg) 2%, transparent 42%),
+      radial-gradient(120% 90% at 50% 0%, transparent 28%, color-mix(in srgb, var(--bg) 90%, transparent) 100%),
+      radial-gradient(60% 50% at 50% 88%, color-mix(in srgb, var(--accent-2) 16%, transparent), transparent 70%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  /* Don't animate the intro content in for users who prefer reduced motion. */
+  .animate-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .animate-scrollline {
+    animation: none !important;
   }
 }
