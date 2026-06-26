@@ -51,6 +51,7 @@ export const skillGroups = [
       { name: 'MySQL' },
       { name: 'IntelliJ' },
       { name: 'Visual Studio' },
+      { name: 'UI Bakery' },
     ],
   },
 ];

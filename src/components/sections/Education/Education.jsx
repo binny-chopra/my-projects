@@ -7,7 +7,7 @@ import { education, certifications } from '../../../data/education';
 
 export function Education() {
   return (
-    <section id="education" className="py-[clamp(70px,11vw,140px)]">
+    <section id="education" className="py-[clamp(26px,3.8vw,52px)]">
       <Container>
         <SectionHeading eyebrow="05 / Education & Certifications" title="Always learning." highlight="learning" />
 

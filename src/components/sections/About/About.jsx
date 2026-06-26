@@ -5,7 +5,7 @@ import { aboutParagraphs, principles } from '../../../data/about';
 
 export function About() {
   return (
-    <section id="about" className="py-[clamp(70px,11vw,140px)]">
+    <section id="about" className="py-[clamp(26px,3.8vw,52px)]">
       <Container>
         <SectionHeading
           eyebrow="01 / About"

@@ -24,7 +24,7 @@ import {
   SiIntellijidea,
   SiMaterialdesign,
 } from 'react-icons/si';
-import { LuSquareCode } from 'react-icons/lu';
+import { LuSquareCode, LuBlocks } from 'react-icons/lu';
 
 /**
  * Maps each skill name to a bundled icon component (react-icons).
@@ -57,4 +57,5 @@ export const skillIcons = {
   MySQL: SiMysql,
   IntelliJ: SiIntellijidea,
   'Visual Studio': LuSquareCode,
+  'UI Bakery': LuBlocks,
 };

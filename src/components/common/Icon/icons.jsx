@@ -112,3 +112,38 @@ export function GitHub(props) {
     </svg>
   );
 }
+
+export function Play(props) {
+  return (
+    <svg {...base} fill="currentColor" stroke="none" {...props}>
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  );
+}
+
+export function Pause(props) {
+  return (
+    <svg {...base} fill="currentColor" stroke="none" {...props}>
+      <rect x="6" y="5" width="4" height="14" rx="1" />
+      <rect x="14" y="5" width="4" height="14" rx="1" />
+    </svg>
+  );
+}
+
+export function VolumeOn(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M11 5 6 9H3v6h3l5 4V5z" />
+      <path d="M16 9a3 3 0 0 1 0 6M19 6.5a7 7 0 0 1 0 11" />
+    </svg>
+  );
+}
+
+export function VolumeOff(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M11 5 6 9H3v6h3l5 4V5z" />
+      <path d="m17 9 5 6M22 9l-5 6" />
+    </svg>
+  );
+}
