@@ -23,7 +23,7 @@ export function Hero() {
 
           <div className="relative order-1 flex flex-col menu:order-2">
             {/* Identity row — only the avatar reveals the enlarged captioned photo */}
-            <Reveal as="div" className="mb-6 flex items-center gap-3.5">
+            <Reveal as="div" className="relative z-30 mb-6 flex items-center gap-3.5">
               <div className="group">
                 <img
                   src={personal.photo}
